@@ -40,12 +40,14 @@ nav{
 nav ul{
     float: right;
     list-style-type: none;
-    margin-right: 40px;
+    margin-right: 150px;
     font-size: 60px;
 }
 
 nav ul li {
     display: inline-block;
+    margin: 10px;
+    font-size: 25px;
 
 }
 nav li a{
@@ -64,21 +66,27 @@ body{
 }
 
 main {
-    padding-top: 18px;
+    padding: 18px;
     
 }
 
 main aside{
     float:left;
     margin-left: 15px;
-    margin-right: 20 px;
+    margin-right: 10px;
     width: 200px;
 
 }
 
+main aside h2{
+    font-weight:bolder;
+    font-size:30px;
+}
 main section{
+    padding-top: 13px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .card {
@@ -107,7 +115,13 @@ main section{
 
 #contact ul li{
     display: inline-block;
+    font-size: 20px;
+    margin: 6px;
 }
+#contact a{
+    font-size: 20px;
+}
+
 footer{
     position:relative;
     bottom:2px;
@@ -127,6 +141,7 @@ footer{
     header nav ul{
         float:left;
         margin-left: 20px;
+        margin-right: 0px;
     }
     header #nameplate{
         background: var(--acc);
