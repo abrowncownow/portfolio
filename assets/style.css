@@ -1,3 +1,113 @@
+/* color pallete generated using khroma.co */
 :root{
+    --bgc:#3a3f5a;
+    --headbgc: #85a8af;
+    --txc: #86e3be;
+    --acc: #efa9a7;
+}
+*{
+    color: var(--txc);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size-adjust: 0.5;
+    line-height: calc(1ex / 0.32);
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 2.5em;
+    line-height: calc(1ex / 0.42);
+}
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: var(--headbgc);
+}
+header h1 {
+    color: var(--txc);
+     
+}
+header img{
     
+    height: 102px;
+    width: 100px;
+}
+nav{
+    flex: auto;
+   float: inline-end;
+   align-items: center;
+}
+
+nav ul{
+    float: right;
+    list-style-type: none;
+    margin-right: 40px;
+    font-size: 60px;
+}
+
+nav ul li {
+    display: inline-block;
+
+}
+nav li a{
+    color: var(--acc);
+    text-decoration-thickness: 3px;
+}
+header #nameplate{
+    background: var(--acc);
+    width: 500px;
+    margin-left: 0px;
+    font-size: 50px;
+}
+
+body{
+    background: var(--bgc);
+}
+
+main{
+    display:flex;
+    flex-direction:column;
+    flex-basis: 100%;
+    flex:1;
+}
+main h2{
+    float:left;
+    width: 300px;
+}
+
+main section{
+    float: right;
+    flex: auto;
+    flex-direction: row;
+}
+.card {
+    display: inline-block;
+    border: 2px 2px #efa9a7;
+    border-style: solid;
+}
+#first-card img{
+    height:400px;
+    width: 600px;
+}
+
+
+
+@media screen and (max-width: 1082px) {
+    header{
+        flex-wrap:wrap;
+    }
+    header img{
+        float:inline-end;
+        height:175px;
+        width: 135px;
+    }
+    header nav ul{
+        float:center;
+        margin-left: 20px;
+    }
+    header #nameplate{
+        background: var(--acc);
+        width: 100%;
+        margin-left: 0px;
+    }
 }
