@@ -1,22 +1,20 @@
-/* color pallete generated using khroma.co */
+/* color pallete generated using colormind */
 :root{
-    --bgc:#3a3f5a;
-    --headbgc: #85a8af;
-    --txc: #86e3be;
-    --acc: #efa9a7;
+    --bgc:#F8F7F2;
+    --headbgc: #AFAA77;
+    --txc: #4A4550; 
+    --acc: #7F7C57;
+    --accd: #95613E;
 }
 *{
     color: var(--txc);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size-adjust: 0.5;
     line-height: calc(1ex / 0.32);
     font-size: 14px;
+    
 }
 
-h1 {
-    font-size: 2.5em;
-    line-height: calc(1ex / 0.42);
-}
 header {
     display: flex;
     flex-direction: row;
@@ -24,7 +22,8 @@ header {
     background: var(--headbgc);
 }
 header h1 {
-    color: var(--txc);
+    color: var(--bgc);
+    padding-left:20px;
      
 }
 header img{
@@ -50,7 +49,7 @@ nav ul li {
 
 }
 nav li a{
-    color: var(--acc);
+    color: var(--bgc);
     text-decoration-thickness: 3px;
 }
 header #nameplate{
@@ -64,35 +63,55 @@ body{
     background: var(--bgc);
 }
 
-main{
-    display:flex;
-    flex-direction:column;
-    flex-basis: 100%;
-    flex:1;
+main {
+    padding-top: 18px;
+    
 }
+
 main aside{
     float:left;
+    margin-left: 15px;
+    margin-right: 20 px;
+    width: 200px;
+
 }
 
 main section{
-    float: right;
-    flex: auto;
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 .card {
-    display: inline-block;
-    border: 2px 2px #efa9a7;
-    border-style: solid;
+    display: flex;
+    position:relative;
+    border: 3px solid var(--accd);
+    background:var(--headbgc);
+}
+.card h3{
+    color: var(--bgc);
+}
+.card p{
+    color: var(--bgc);
 }
 #first-card img{
-    height:400px;
+    height:100%;
     width: 600px;
 }
+.card div{
+    position: absolute;
+    bottom: 15px;
+    left:0px;
+    background:var(--accd);
+    padding: 5px;
+}
+
 #contact ul li{
     display: inline-block;
 }
 footer{
-    justify-self: center;
+    position:relative;
+    bottom:2px;
+    left: 50%;
 }
 
 
@@ -106,12 +125,15 @@ footer{
         width: 135px;
     }
     header nav ul{
-        float:center;
+        float:left;
         margin-left: 20px;
     }
     header #nameplate{
         background: var(--acc);
         width: 100%;
         margin-left: 0px;
+    }
+    iframe{
+        width:100%;
     }
 }
