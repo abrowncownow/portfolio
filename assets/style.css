@@ -70,7 +70,7 @@ main{
     flex-basis: 100%;
     flex:1;
 }
-main h2{
+main aside{
     float:left;
     width: 300px;
 }
@@ -89,7 +89,12 @@ main section{
     height:400px;
     width: 600px;
 }
-
+#contact ul li{
+    display: inline-block;
+}
+footer{
+    justify-self: center;
+}
 
 
 @media screen and (max-width: 1082px) {
