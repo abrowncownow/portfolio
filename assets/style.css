@@ -6,15 +6,15 @@
     --acc: #7F7C57;
     --accd: #95613E;
 }
+/* defaults set for readability */
 *{
     color: var(--txc);
     font-family: Arial, Helvetica, sans-serif;
-    font-size-adjust: 0.5;
     line-height: calc(1ex / 0.32);
     font-size: 14px;
     
 }
-
+/* Header with navbar */
 header {
     display: flex;
     flex-direction: row;
@@ -64,7 +64,7 @@ header #nameplate{
 body{
     background: var(--bgc);
 }
-
+/* slightly padded main to avoid edges */
 main {
     padding: 18px;
     
@@ -89,15 +89,25 @@ main section{
     
 }
 
+/* .cards wrapped inside the .work wrapper */
 .work{
     display:flex;
+    flex-wrap:wrap;
+  
 }
 
 .card {
-   
+    flex:inherit;
+    height: 200px;
+    width: 200px;
     position:relative;
     border: 3px solid var(--accd);
     background:var(--headbgc);
+    margin: 6px;
+}
+/* hover box shadow */
+.card img:hover{
+    box-shadow: 12px 10px 10px 7px var(--accd), -10px 10px 10px 7px var(--txc), -10px -7px 10px 1px var(--headbgc), 5px 5px 10px 5px rgba(74,69,80,0);
 }
 .card h3{
     color: var(--bgc);
@@ -106,12 +116,9 @@ main section{
     color: var(--bgc);
 }
 
-#first-card{
-    height: 400px;
-    flex-basis: 100px;
-}
-#first-card img{
+.card img{
     height: 100%;
+    width: 100%;
 }
 
 .card div{
@@ -121,13 +128,20 @@ main section{
     background:var(--accd);
     padding: 5px;
 }
+.card div:hover{
+    box-shadow: 5px 5px 6px 7px var(--acc), -10px 10px 6px 7px var(--txc), -10px -7px 6px 1px var(--headbgc), 5px 5px 6px 5px rgba(74,69,80,0);
+}
+/* first card is larger */
+#first-card{
+    height: 400px;
+    width: 450px;
 
-
+}
 
 #contact ul li{
     display: inline-block;
     font-size: 20px;
-    margin: 6px 0;
+    margin-right: 10px;  
 }
 #contact a{
     font-size: 18px;
@@ -149,17 +163,43 @@ footer{
         height:175px;
         width: 135px;
     }
-    header nav ul{
-        float:left;
-        margin-left: 20px;
-        margin-right: 0px;
+
+    header nav ul li{
+        display:flex;
+        justify-content: space-around;
+        
     }
+  
     header #nameplate{
         background: var(--acc);
         width: 100%;
         margin-left: 0px;
     }
+    /* pdf viewer snaps to edge of screen */
     iframe{
         width:100%;
+    }
+    .work {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 800px){
+
+    #first-card{
+        height:200px;
+        width: 200px;
+    }
+    main aside{
+        width: 100px;
+    }
+    main aside h2{
+        font-size: 20px;
+    }
+    #contact ul li{
+        display: flex;
+        
+    }
+    #contact a{
+        font-size: 14px;
     }
 }
