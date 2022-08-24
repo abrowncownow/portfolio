@@ -89,8 +89,12 @@ main section{
     
 }
 
+.work{
+    display:flex;
+}
+
 .card {
-    display: flex;
+   
     position:relative;
     border: 3px solid var(--accd);
     background:var(--headbgc);
@@ -101,10 +105,15 @@ main section{
 .card p{
     color: var(--bgc);
 }
-#first-card img{
-    height:100%;
-    width: 600px;
+
+#first-card{
+    height: 400px;
+    flex-basis: 100px;
 }
+#first-card img{
+    height: 100%;
+}
+
 .card div{
     position: absolute;
     bottom: 15px;
@@ -113,13 +122,15 @@ main section{
     padding: 5px;
 }
 
+
+
 #contact ul li{
     display: inline-block;
     font-size: 20px;
-    margin: 6px;
+    margin: 6px 0;
 }
 #contact a{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 footer{
