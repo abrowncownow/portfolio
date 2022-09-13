@@ -104,6 +104,7 @@ main section{
     border: 3px solid var(--accd);
     background:var(--headbgc);
     margin: 6px;
+    border-radius: 10px;
 }
 /* hover box shadow */
 .card img:hover{
@@ -119,6 +120,7 @@ main section{
 .card img{
     height: 100%;
     width: 100%;
+    border-radius: 9px;
 }
 
 .card div{
